@@ -1,0 +1,10 @@
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+<form action="{% url 'link' %}" method="post">
+    {% csrf_token %} <!--Token para segurança-->
+    <div class="container">
+        <center>
+            <br>
+            <button class="form-control-sm" style="font-size: larger;"><strong>Teste</strong></button>
+        </center>
+        {% endblock %}

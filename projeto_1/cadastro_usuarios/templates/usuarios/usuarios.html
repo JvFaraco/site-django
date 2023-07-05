@@ -1,0 +1,25 @@
+<!-- Template Base para todas as páginas-->
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+<div class="container">
+    <center>
+        <br>
+        <h1><strong>Usuários Cadastrados:</strong> </h1> <br>
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Idade</th>
+            </tr>
+            {% for usuario in usuarios %}
+            <tr>
+                <td>{{usuario.id_usuario}}</td>
+                <td>{{usuario.nome}}</td>
+                <td>{{usuario.idade}}</td>
+            </tr>
+    </center>
+    {% endfor %}
+    </table>
+</div>
+{% endblock %}
+<!-- Fim do template-->

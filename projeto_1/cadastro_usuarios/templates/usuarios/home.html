@@ -1,0 +1,21 @@
+<!-- Template Base para todas as páginas-->
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+<form action="{% url 'listagem_usuarios' %}" method="post">
+  {% csrf_token %}
+  <div class="container">
+    <center>
+      <br>
+      <font size='7'>
+        <h1>
+          <font size='10'><strong>Cadastro de Usuários</strong></font>
+        </h1>
+        Nome <input name="nome" class="form-control-sm" type="text">
+        Idade <input name="idade" class="form-control-sm" type="text">
+        <button class="form-control-sm">Enviar</button>
+      </font>
+    </center>
+  </div>
+</form>
+{% endblock %}
+<!-- Fim do template-->
